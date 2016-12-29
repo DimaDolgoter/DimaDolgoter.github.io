@@ -1,0 +1,46 @@
+@hidden:rgba(0,0,0,0);
+
+.navbar li.active a{
+    border-bottom: 3px solid;
+    font-size: 3em;
+    background:@hidden !important;
+}
+header {
+    background: url(../img/header-bg1.jpg);
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    
+    .monitor {
+        transform: skewX(0deg);
+        /*background:url(../img/monitor-bg.jpg);*/
+        background-size: 100% 100%;
+        color: #fff;
+        /*  white-space: pre;*/
+        /*   position: absolute;чтоб текст поднимался надо обрамить спан блоком и дать ему абсолют и боттом 0*/
+        position: absolute;
+        top: 32.8%;
+        left: 39%;
+        width: 28vw;
+        font-family: monospace;
+        font-size: 10px;
+        line-height: 1.4;
+        height: 232px;
+    }
+    .navbar-default {
+        border: none;
+        background-color: @hidden;
+        
+           
+        
+    }
+   
+}
+.typed-cursor i{
+transform: skew(10deg, 0deg) ;
+}
+ section{
+        height: 600px;
+        border: 1px solid;
+    }
