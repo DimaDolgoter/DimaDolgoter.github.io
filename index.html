@@ -8,7 +8,12 @@
     <title>For my dear panda</title>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+            <script src="js/jquery.fullscreen.min.js"></script>
 
+  <script src="js/typed.min.js"></script>
+  <script src="http://www.turnjs.com/lib/turn.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,332 +23,247 @@
   </head>
   <body>
   <header>
-  	
+
   </header>
-  <div class="content">
-  <div class="pp1" style="z-index:999999999;">
-  <a href="http://www.amalgama-lab.com/songs/s/sum_41/with_me.html" class="mus-name" target="_blank" >Sum 41 - With Me &nbsp; read the translation</a><br>
-	  <audio id="p1" src="09_sum_41_with_me_myzuka.me.mp3" controls volume="0.1" autoplay >gfjf</audio><br>
-	  <script>
-	  myVid=document.getElementById("p1");
-myVid.volume=0.1;
-		  
-</script>
+<div id="flipbook">
+    <div class="hard"><img src="PvMpeW1HOlc.jpg" alt=""> <span class="fp"></span><br><br><span class="element"></span></div> 
+    <div class="hard"></div>
+ 
+    <div class="pagee"> <img src="p1.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p2.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p3.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p4.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p5.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p6.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p7.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p8.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p9.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p10.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p13.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p11.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p12.jpg" alt=""> </div>
   
-	  
-	  <button class="russ"><img src="http://icons.iconarchive.com/icons/custom-icon-design/flag-3/256/Russia-Flag-icon.png" alt=""></button>
-	  <button class="engg"><img src="http://icons.iconarchive.com/icons/custom-icon-design/flag-3/256/United-States-Flag-icon.png" alt=""></button>
 
- </div>
-	 <!-- <audio src="oasis.mp3" controls></audio><br>--> 
-	  
-	  
-	  
-	  
-	  
+   
+    <div class="hard"></div>
+    <div class="hard"></div>
+</div>
+
+    
+    <style>
+		.element{
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+		}
+	  body{
+		  background-color:#eaeaea;
+    overflow:hidden;
+}
+
+		/*#flipbook .hard {
+			border: 4px solid silver; 
+		}*/ 
+		#flipbook .hard img:hover{
+			margin-left: 40px;
+		}
+		#flipbook .hard img{
+			animation: mov 1s;
+			max-width: 100%;
+			transition: margin-left 1s;
+		}
+		@keyframes mov{
+			
+			0%,100%{
+				margin-right: 40px;
+			}
+			50%{
+				margin-right: 10px;
+			}
+		}
+		
+#flipbook{
+
 	
-	  
-	  
-	  
-	  
+	margin: 3% auto !important;
+    width:800px;
+    height:600px;
+}
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    	  <script>
-	  $(".engg").click(function(){
-		  $(".eng").css("display","inline-block");
-		  $(".ru").css("display","none");
-	  });
-		  	  $(".russ").click(function(){
-		  $(".eng").css("display","none");
-		  $(".ru").css("display","inline-block");
-	  });
+		#flipbook .pagee img{
+			max-width: 100%;
+			height: 600px;
+			
+		}
+		#flipbook .pagee{
+				-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    width:800px;
+		}
+#flipbook .page{
+
+    height:600px;
+    background-color:white;
+    line-height:300px;
+    font-size:20px;
+    text-align:center;
+}
+
+#flipbook .page-wrapper{
+    -webkit-perspective:2000px;
+    -moz-perspective:2000px;
+    -ms-perspective:2000px;
+    -o-perspective:2000px;
+    perspective:2000px;
+}
+
+		.page-wrapper.even{
+			background-color: #ccc !important;
+		}
+		/*#flipbook .hard:first-child{
+			background-image: url("https://pp.userapi.com/c837139/v837139323/1cd41/PvMpeW1HOlc.jpg") ;
+			background-color: #ccc !important;
+			background-size: 100% 50%;
+			background-position: bottom left;
+			background-repeat: no-repeat;
+		}*/ 
+#flipbook .hard{
+	position: relative;
+	line-height: 1.5 !important;
+   background:#ccc !important ; 
+    color:#333;
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
+    font-weight:bold;
+}
+
+#flipbook .odd{
+    background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));
+    background-image:-webkit-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-moz-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-ms-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-o-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
+    
+}
+
+#flipbook .even{
+    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+    background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
+}</style>
+     
+     
+     
+     <script>
+	  $("#flipbook").turn({
+    width: 800,
+    height: 600,
+    autoCenter: true
+});
 	  
 	  </script>
-	  
-    <style>
-		button img{
-			width: 50px;
-		}
-		button{
-			background-color: transparent;
-			border: none;
-		}
-		span{
-			border-bottom: 1px dashed;
-		}
-		.ru{
-			display: none;
-		}
-		header,footer{
-			height: 200px;
-		}
-		header{
-			background-image: url(header-bg.jpg);
-			background-size: 100% 100%;
-		}
-		footer{
-			background-image: url(footer-bg.jpg);
-			background-size: 100% 100%;
-		}
-		.content img{
-			width: 300px:
-		}
-		.content{
-			padding: 0 15%;
-			background-image: url(bg-cont.jpg);
-			background-size: 100.2% 100.2%;
-			    background-position-y: -2px;
-			
-		}
-		@media(max-width:780px){
-				.content{
-			padding: 0 15%;
-			background-image: url(bg-cont.jpg);
-			background-size: 100.2% 100.2%;
-			    background-position-y: -5px;
-			
-		}
-		}
-		@font-face{
-			font-family:"lotr";
-			src: url('RINGM.TTF'); /* IE9 Compat Modes */
-		}
-		@font-face{
-			font-family:"fl";
-			src: url('AlteCaps.ttf'); /* IE9 Compat Modes */
-		}
-		
-		
-		
-		p:first-letter{
-			font-family:"fl";
-			font-size: 2em;
-		}
-		p{
-			word-spacing: 5px;
-			font-family:"lotr";
-			color: #000;
-			font-size: 1.2em;
-		}
-		body{
-			 
-		min-width: 900px;
-			 
-		}
-		.pp1{
-			position: fixed;
-			top: 10px;
-			left: 20px;
-		}
-		.mus-name{
-			background-color: #fff;
-			position: relative;
-			top: 2px;
-			padding: 4px;
-			font-size: 1.2em;
-		}
-		td{
-			font-weight: 700;
-			width: 300px;
-			padding: 5px;
-			vertical-align:top;
-		}
-		tr:hover{
-			border-bottom: 2px solid #fff;
-		}
-		tr{
-			border-bottom: 2px solid transparent;
-		}
-		table{
-			margin: 0 auto;
-		}
-		
-.well {
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 20px;
- background-color:transparent;     border: none; 
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-}
-	  </style>
- 
-
-
-
-
-
-
-
- <br>
-
-<p class="eng">
-
- Once upon a time there were cat and a panda. They were in one zoo, but sat in different cages. Also saw sometimes when it was necessary to pass on  <span data-toggle="tooltip" data-placement="top" title="knowledge + watering place">knowledgatering place  </span>
-
- . The cat wasn't really glad to go there, but when has seen a panda his ears were nemno pricked up. The panda was beautiful, on her there was a usual wool, as well as on other her relatives, but her wool has been accurately weaved into fancy patterns which the cat admired. 
- </p>
- <p class="ru">
- Однажды жили были кот и панда. Они были в одном зоопарке, но сидели в разных клетках.  И виделись иногда, когда нужно было пройти на <span title="знания + водопой">знаниепой</span> . Кот был не очень рад ходить туда, но когда увидел панду его уши немно навострились. Панда была красивой, на ней была обычная шерсть, как и на других ее сородичах, но ее шерсть была аккуратно сплетена в причудливые узоры, которыми кот любовался. 
- </p>
- <p class="eng">
-And here, the panda has seen as the cat stares at her the blue eyes. He has stood, has numbed, because it is not indecently. -" what to do next, not indecently to watch it for other animals" - Rushed in his head. But right there all fears have left - the panda has smiled to him! 
-</p>
- <p class="ru">
-И вот, панда увидела как кот таращится на нее своими голубыми глазами. Он замер, оцепенел. -" что делать дальше, это ведь не красово смотреть за другими животными"- Проносилось в его голове. Но тут же все страхи ушли - панда улыбнулась ему! 
- </p>
- 
- 
- 
- 
- 
- 
-<p class="eng">
-Over and over again the cat waited when again sees a panda. All her friends knew about her. Tow-haired, the most courageous, advised to drink from the Lion bowl (the wizard of the oz city) and though to mew something. But a cat, thinking out different excuses, I haven't made it. There was a time, to a cat filled the most tasty food, there was a new series of his favourite TV show and he has wanted to share the happiness. He have photographed and has laid out in vzoo.com network. And the panda has liked his photo. 
-</p>
-
- <p class="ru">
-Раз за разом кот ждал когда снова увидит панду. О ней знали все ее друзья. Белобрысый, самый смелый, советовал отпить из миски Льва (волшебник изумруного города) и хоть что-то мяукнуть. Но кот, придумывая разные отговорки, не сделал этого. Шло время, коту насыпали вкуснейшую еду, вышла новая серия его любимого сериала и он захотел поделиться своим счастьем. Сфотографировал и выложил в сеть vzoo.com. И панда лайкнула его фото. 
- </p>
- 
- 
- 
- 
-<p class="eng">
-There were no doubts. He was pleasant to her. And the cat, has begun to write her...
-</p>
- <p class="ru">
-Тут уж небыло сомнений. Он ей понравился. И кот, принялся писать ей...
- </p>
- 
- 
- 
- 
- 
- 
-<img src="Cute-panda-and-cat-635x397.jpg" width="300px" alt="">
-<p class="eng">
-A lot of miscellaneous happened during all the time. The cat and a panda were reconciled, quarreled, dispersed and again met. 
-
-</p>
-
- <p class="ru">
-
-Много разного случилось за все время. Кот и панда мирились, ссорились, расходились и снова сходились. 
- </p>
- 
- 
- 
- 
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
- 29.02.2016
-</a>
-
-<div class="collapse" id="collapseExample">
-  <div class="well">
-<p class="eng">This was the first time I made you an purposal. I found you walking down the stairs to the shower. When I got on one knee, I gave you a kinder and turned on that song (as you know, i like songs withc consist from making sanse text and songs on this page are not expection)</p>
-<p class="ru">Это был первый раз, когда я сделал тебе предложение. Я застал тебя бегущей по лестнице в душ. Стал на одно колено,  подарил киндер и включил эту песню (как ты знаешь, я люблю песни с осмысленным текстом, и песни на этой странице не исключение)</p>
-  <div class="pp2">
-  <a href="http://www.amalgama-lab.com/songs/o/oasis/wonderwall.html" target="_blank" class="mus-name">Oasis - Wonderwall &nbsp; read the translation</a><br>
-	  <audio id="p2" src="oasis.mp3" controls   style="width: 311px;">gfjf</audio><br>
-	  <script>
-	  myVid=document.getElementById("p2");
-myVid.volume=0.5;
-</script>
- </div>
-   <img src="p1.jpg" alt="" class="purp">
+     
+	     <div class="monitor" title="Сделано с помощью Typed.js">
+  <!-- <span class="element"></span>--> 
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+  <!-- <span class="fp"></span>--> 
+   <div id="typed-strings">
+    <span> 
+      
+   <i>Привет Панда. <br>
+  В прошлый раз была история о моем первом предложении. Сейчас будет  история о втором. <br>
+   27.12.2016 <br></i>
    
+    </span>
     
-  </div>
+    
 </div>
-<p class="eng">
-And here, the cat who has promised to spend the whole day together  must spend day not with her. And kind of the cat didn't understand that it isn't correct what sad he wouldn't come to a panda, she become sadnest more and more. 
-</p>
 
- <p class="ru">
-И вот, кот, который пообещал провести весь день вместе, должен был провести день не с ней. И как бы кот не понимал что это не правильно, каким бы грустным он не приходил к панде, она все больше грустнела. 
- </p>
-<p class="eng">
-And here, when the cat joyful ran to a panda, to lick her wounds he has learned that the panda become in a dragon and has fly away.
-</p>
- <p class="ru">
-И вот, когда кот радостный бежал к панде, зализывать ее раны он узнал, что панда првратилась в дракона и улетела. </p>
-
-
-
-<p class="eng">
-The cat contacted her and heard only - "I don't love you, you aren't interesting to me, I hate you, you are a smelly cat". <br><img src="vanner-smelly.jpg"  width="150px;"alt=""  ><br>
-It has very much wounded him, but the cat knew that it is told not by his panda, but a dragon. His panda just didn't want that a cat, hurt her, even accidentally having scratched little bit.
-
-</p>
-
-<p class="ru">
-
-Кот связывался с ней  и слышал только -"я тебя не люблю, ты мне не интересен, ненавижу тебя, ты вонючий кот".  <br><img src="vanner-smelly.jpg"  width="150px;"alt=""  ><br> </p>
-
-<p class="ru">
-Это его очень ранило, но кот знал, что это говорит не его панда, а дракон. Его панда просто не хотела чтобы кот,  причинял ей боль, даже случайно царапнув.  </p>
-
-
-
-<p class="eng">
- To cat more nothing remained except how to dress a knightly armor and to go for fight with a dragon.
- </p>
- <p class="ru">
-Коту больше ничего не оставалось, кроме как одеть рыцарские домпехи и пойти сражаться с драконом </p>
-
- <div class="container">
- 	<div class="row">
- 		<div class="col-xs-4"> <img src="tiger__the_cat_warrior_by_rhyoxene.png" class="img-responsive" alt=""></div>
- 		<div class="col-xs-4"> <img src="panda_dragon_by_tiikeri-d2xmlic.jpg"  class="img-responsive"alt=""></div>
- 	</div>
- </div>
-
-
-<p class="eng">
-He knew, it isn't simple to overcome a dragon, but he has no other exit. As the prophecy says - the cat won't be able to live without panda. Or he will take away her from a dragon or will die. Another can't be
-</p>
-
-<p class="ru">
-	Он знал, одолеть дракона будет не просто, но у него небыло другого выхода. Как гласит пророчество - "Кот не сможет жить без Панды. Или он заберет ее у дракона или умрет. Другого выхода нет."</p>
-
-<table >
-<h3 class="text-center">Sum 41 - With Me</h3>
-	<tr>
-		<td>I don't want this moment to ever end. </td>
-		<td>Я не хочу, чтобы этот миг закончился,</td>
-	</tr>
-	<tr>
-		<td>Where everything's nothing without you.</td>
-		<td>Ведь без тебя всё – это ничто.</td>
-	</tr>
-	<tr>
-		<td>I want you to know; with everything I won't let this go.</td>
-		<td>Я хочу, чтобы ты знала, я не отпущу тебя ни за что – </td>
-	</tr>
-		<tr>
-		<td>These words are my heart and soul (so I hold on)</td>
-		<td>Это не пустые слова - слова от сердца.</td>
-	</tr>
-		<tr>
-		<td>I'll hold on to this moment you know.</td>
-		<td>Я буду держаться за этот миг, ты ведь знаешь. </td>
-	</tr>
-		<tr>
-		<td>Cause I'll bleed my heart out to show and I won't let go.</td>
-		<td>Я умру за то, чтобы доказать, что не отпущу тебя.</td>
-	</tr>
-	
-</table>
-
+  <div id="fps">
+    <span> 
+      
+   листай за уголки 
+    </span>
+    
+    
 </div>
+<span id="typed"></span>
+   
+   </div>
 <footer>
-	
-</footer>
+	<script type="text/javascript">
+$(function() {
+    $('.open').click(function() {
+        $('body').fullscreen();
+        return false;
+    });
+    $('.close').click(function() {
+        $.fullscreen.exit();
+        return false;
+    });
+});
+</script>
 
+
+</footer>
+ <style>
+	  
+	/* .element{
+		 position: absolute;
+		 top: 10px;
+		 left: 10px;
+	 }*/ 
+	 
+	 .fps{
+		 
+	 }
+	  
+	  </style>
+
+<script>
+	var el = document.documentElement
+    , rfs = // for newer Webkit and Firefox
+           el.requestFullScreen
+        || el.webkitRequestFullScreen
+        || el.mozRequestFullScreen
+;
+if(typeof rfs!="undefined" && rfs){
+  rfs.call(el);
+} else if(typeof window.ActiveXObject!="undefined"){
+  // for Internet Explorer
+  var wscript = new ActiveXObject("WScript.Shell");
+  if (wscript!=null) {
+     wscript.SendKeys("{F11}");
+  }
+}
+	  
+	  </script>
+
+  
+    <script src="js/modernizr.2.5.3.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/jquery.fullscreen.min.js"></script>
  </body>
 </html>
