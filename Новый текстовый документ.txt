@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>For my dear panda</title>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="js/typed.min.js"></script>
+   <script src="turn.min.js"></script>
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <header>
+  	
+  </header>
+<div id="flipbook">
+    <div class="hard" style="background-image:url('hh.jpg') !important"><span class="fp"></span><br><br></div> 
+    <div class="hard"></div>
+ 
+    <div class="pagee"> <img src="p1.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p2.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p3.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p4.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p5.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p6.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p7.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p8.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p9.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p10.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p13.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p11.jpg" alt=""> </div>
+    <div class="pagee"> <img src="p12.jpg" alt=""> </div>
+  
+
+   
+  
+    <div class="hard"><img src="hhh.jpg" alt=""></div>
+</div>
+
+    
+    <style>
+		/*.element{
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+		}*/ 
+	  body{
+		  background-color:#eaeaea;
+    overflow:hidden;
+}
+
+		/*#flipbook .hard {
+			border: 4px solid silver; 
+		}*/ 
+		#flipbook .hard img:hover{
+		
+		}
+		#flipbook .hard img{
+			animation: mov 1s;
+			max-width: 100%;
+			
+		}
+		@keyframes mov{
+			
+			0%,100%{
+				margin-right: 40px;
+			}
+			50%{
+				margin-right: 10px;
+			}
+		}
+		
+#flipbook{
+
+	
+	margin: 3% auto !important;
+    width:800px;
+    height:600px;
+}
+
+		#flipbook .pagee img{
+			max-width: 100%;
+			height: 600px;
+			
+		}
+		#flipbook .pagee{
+				-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    width:800px;
+		}
+#flipbook .page{
+
+    height:600px;
+    background-color:white;
+    line-height:300px;
+    font-size:20px;
+    text-align:center;
+}
+
+#flipbook .page-wrapper{
+    -webkit-perspective:2000px;
+    -moz-perspective:2000px;
+    -ms-perspective:2000px;
+    -o-perspective:2000px;
+    perspective:2000px;
+}
+
+		.page-wrapper.even{
+			background-color: #ccc !important;
+		}
+		/*#flipbook .hard:first-child{
+			background-image: url("https://pp.userapi.com/c837139/v837139323/1cd41/PvMpeW1HOlc.jpg") ;
+			background-color: #ccc !important;
+			background-size: 100% 50%;
+			background-position: bottom left;
+			background-repeat: no-repeat;
+		}*/ 
+#flipbook .hard{
+	position: relative;
+	line-height: 1.5 !important;
+   background:#ccc !important ; 
+    color:#333;
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
+    font-weight:bold;
+}
+
+#flipbook .odd{
+    background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));
+    background-image:-webkit-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-moz-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-ms-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-o-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
+    
+}
+
+#flipbook .even{
+    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+    background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
+}</style>
+     
+     
+     
+     <script>
+	  $("#flipbook").turn({
+    width: 800,
+    height: 600,
+    autoCenter: true
+});
+	  
+	  </script>
+     
+	     <div class="monitor" title="Сделано с помощью Typed.js">
+  <!-- <span class="element"></span>--> 
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+  <!-- <span class="fp"></span>--> 
+   <div id="typed-strings">
+    <span> 
+      
+   <i>Привет Панда. <br>
+ Сейчас будет история, которая произошла <br>
+   27.12.2016 <br></i>
+   	 
+	    <br>  листай за уголки 
+   
+    </span>
+    
+    
+</div>
+
+  <div id="fps">
+    <span> 
+      
+   листай за уголки 
+    </span>
+    
+    
+</div>
+<span id="typed"></span>
+   
+   </div>
+<footer>
+	
+</footer>
+ <style>
+	  
+	 .element{
+		padding: 10px;
+		 text-align: center;
+		 display: block;
+	 }
+	 
+	 .fp{
+		 position: absolute;
+		    top: 300px;
+    width: 86%;
+    left: 28px; 
+	 }
+	  
+	  </style>
+
+  
+   
+    <script src="js/js.js"></script>
+ </body>
+</html>
